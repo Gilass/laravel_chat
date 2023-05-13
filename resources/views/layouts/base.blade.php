@@ -16,7 +16,7 @@
 <div class="flex h-full">
         @section('menu')
         @show
-        <div class="flex-grow p-5">
+        <div class="flex-grow p-4">
             @section('content')
             @show
         </div>

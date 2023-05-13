@@ -3,7 +3,7 @@
     <div class="h-full flex flex-col gap-5">
 
         <div class="flex-grow-1">
-            <ChatMessages :messages="messages" class="backdrop-blur-none"></ChatMessages>
+            <ChatMessages :messages="messages" :auth_user="user" class="backdrop-blur-none"></ChatMessages>
         </div>
 
 

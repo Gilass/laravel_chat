@@ -36,4 +36,16 @@ class ChatsController extends Controller
 
         return ['status' => 'Message Sent!'];
     }
+
+    public function deleteMessage(Request $request)
+    {
+
+        if(Auth::user()->id != $request->input('message')['user']['id']){
+            return ['status' => 'You are not authorized to delete this message!'];
+        }
+
+        $message = Message::find($request->input('message')['id']);
+        $message->delete();
+        return ['status' => 'Message Deleted!'];
+    }
 }
