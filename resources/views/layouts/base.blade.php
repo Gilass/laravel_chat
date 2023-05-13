@@ -11,14 +11,19 @@
 
 </head>
 <body class="antialiased">
-<div class="bg-slate-950 p-5 text-white min-h-screen">
+<div class="text-white min-h-screen bg-gradient-to-tr from-slate-950 to-slate-900">
 
-    @section('menu')
-{{--        @include('layouts.menu')--}}
-    @show
+<div class="flex">
+        @section('menu')
+            {{--        @include('layouts.menu')--}}
+        @show
+        <div class="flex-grow p-5">
+            @section('content')
+            @show
+        </div>
+</div>
 
-    @section('content')
-    @show
+
 
 
 </div>
