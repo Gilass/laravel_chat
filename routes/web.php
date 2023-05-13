@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/chat', [ChatsController::class, 'index'])->name('chat');
+Route::get('/account', [UserController::class, 'myAccount'])->middleware('auth')->name('account');
 Route::get('/messages', [ChatsController::class, 'fetchMessages']);
 Route::post('/messages', [ChatsController::class, 'sendMessage']);
 Route::delete('/messages', [ChatsController::class, 'deleteMessage']);

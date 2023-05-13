@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input-primary{
+    @apply p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+}

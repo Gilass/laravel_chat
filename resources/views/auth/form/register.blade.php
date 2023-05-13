@@ -6,7 +6,7 @@
         <div class="flex flex-col gap-1">
             <p>Username :</p>
             <input id="name" type="text"
-                   class="p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none
+                   class="input-primary
                                  @error('name') text-red font-bold @enderror"
                    name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -20,7 +20,7 @@
         <div class="flex flex-col gap-1">
             <p>Email :</p>
             <input id="email" type="email"
-                   class="p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none
+                   class="input-primary
                                 @error('email') text-red font-bold @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
             @error('email')
@@ -33,7 +33,7 @@
         <div class="flex flex-col gap-1">
             <p>Password :</p>
             <input id="password" type="password"
-                   class="p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none
+                   class="input-primary
                                        @error('password') text-red font-bold @enderror" name="password" required autocomplete="new-password">
 
             @error('password')
@@ -45,7 +45,7 @@
 
         <div class="flex flex-col gap-1">
             <p>Confirm password :</p>
-            <input id="password-confirm" type="password" class="p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none"
+            <input id="password-confirm" type="password" class="input-primary"
                    name="password_confirmation" required autocomplete="new-password">
 
         </div>

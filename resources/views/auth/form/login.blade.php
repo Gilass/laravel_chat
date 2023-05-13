@@ -9,7 +9,7 @@
 
         <p>Email :</p>
         <input id="email" type="email"
-               class="p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none
+               class="input-primary
                    @error('email') is-invalid @enderror" name="email"
                value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -24,7 +24,7 @@
 
         <p>Password :</p>
         <input id="password" type="password"
-               class="p-2 text-slate-950 rounded-lg border-2 border-slate-700 focus:outline-none
+               class="input-primary
              @error('password') is-invalid @enderror"
                name="password" required autocomplete="current-password">
 
