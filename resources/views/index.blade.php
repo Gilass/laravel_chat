@@ -36,10 +36,10 @@
 
             <hr class="mx-auto border-slate-500 w-75">
 
-            <button
-                class="mx-auto w-25 p-2 px-4 bg-neutral-900 rounded-lg text-lg border-2 border-slate-600 transition hover:bg-neutral-800 ">
+            <a href="https://github.com/Gilass/laravel_chat" target="_blank"
+                class="mx-auto w-25 p-2 px-4 bg-neutral-900 rounded-lg text-lg border-2 border-slate-600 transition hover:bg-neutral-800 text-white text-center cursor-pointer">
                 <i class="bi bi-github mr-2"></i> Github
-            </button>
+            </a>
         </div>
 
     </div>
