@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageDeleted;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,7 +35,10 @@ class ChatsController extends Controller
 
         broadcast(new MessageSent($user, $message))->toOthers();
 
-        return ['status' => 'Message Sent!'];
+        return [
+            'status' => 'Message Sent!',
+            'message' => $message
+        ];
     }
 
     public function deleteMessage(Request $request)
@@ -44,8 +48,20 @@ class ChatsController extends Controller
             return ['status' => 'You are not authorized to delete this message!'];
         }
 
-        $message = Message::find($request->input('message')['id']);
-        $message->delete();
-        return ['status' => 'Message Deleted!'];
+
+        $message = Message::findOrFail($request->input('message')['id']);
+        if($message){
+            broadcast(new MessageDeleted($message))->toOthers();
+            $message->delete();
+
+            return ['status' => 'Message Deleted!'];
+
+        }
+
+
+
+        return ['status' => 'nothing to delete'];
+
+
     }
 }

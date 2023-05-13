@@ -43,6 +43,7 @@ export default {
                     }
                 })
             console.log(response.data)
+            this.$emit("deletemessage", message);
         }
     },
     props: ["messages", "auth_user"],
