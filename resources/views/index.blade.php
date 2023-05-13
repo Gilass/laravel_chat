@@ -29,9 +29,9 @@
                     account
                 </a>
             @else
-                <button class="mx-auto w-25 p-2 px-4 bg-sky-500 rounded-lg text-lg transition hover:bg-sky-400 ">Go
+                <a href="{{ route('chat') }}" class="mx-auto text-white w-25 p-2 px-4 bg-sky-500 rounded-lg text-lg transition hover:bg-sky-400 text-center">Go
                     Chat
-                </button>
+                </a>
             @endif
 
             <hr class="mx-auto border-slate-500 w-75">
