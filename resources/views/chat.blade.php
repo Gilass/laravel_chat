@@ -1,7 +1,7 @@
 <!-- resources/views/chat.blade.php -->
-@extends('layouts.app')
+@extends('layouts.base')
 @section('content')
-<div>
+<div id="app" class="h-full">
     <chat-container :user="{{Auth::user()}}"></chat-container>
 </div>
 @endsection

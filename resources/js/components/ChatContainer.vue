@@ -1,15 +1,20 @@
 <template>
-    <div class="container">
-        <div class="card">
-            <div class="card-header">Chats</div>
-            <div class="card-body">
-                <ChatMessages :messages="messages"></ChatMessages>
-            </div>
-            <div class="card-footer">
-                <ChatForm v-on:messagesent="addMessage" :user="user"></ChatForm>
-            </div>
+
+    <div class="h-full flex flex-col gap-5">
+
+        <div class="flex-grow-1">
+            <ChatMessages :messages="messages" class="backdrop-blur-none"></ChatMessages>
+        </div>
+
+
+
+        <div class="mt-auto w-full mt-auto">
+            <ChatForm v-on:messagesent="addMessage" :user="user" class="bottom-0"></ChatForm>
         </div>
     </div>
+
+
+
 </template>
 
 <script>
@@ -19,7 +24,7 @@ import ChatForm from "./ChatForm.vue";
 export default {
     name: "ChatContainer",
     data() {
-        return{
+        return {
             messages: []
         }
     },

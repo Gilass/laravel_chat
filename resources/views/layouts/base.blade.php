@@ -13,9 +13,9 @@
 <body class="antialiased bg-gradient-to-tr from-slate-950 to-slate-900">
 <div class="text-white min-h-screen  bg-bottom bg-no-repeat bg-gradient-to-t from-transparent from-30% via-slate-900 to-90% to-transparent">
 
-<div class="flex ">
+<div class="flex h-full">
         @section('menu')
-            {{--        @include('layouts.menu')--}}
+                    @include('layouts.menu')
         @show
         <div class="flex-grow p-5">
             @section('content')
