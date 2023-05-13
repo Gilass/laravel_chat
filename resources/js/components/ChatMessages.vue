@@ -13,14 +13,12 @@
             </div>
 
             <div>
-                <div class="w-12 h-12 bg-white rounded-full">
-
-                </div>
+                <img :src="'/storage/'+message.user.avatar" class="w-12 h-12 rounded-full border-2 border-slate-700">
             </div>
             <div class="flex flex-col">
                 <div>
                     <span class="text-xl font-bold text-amber-500">{{ message.user.name }}</span>
-                    <span class="text-slate-400 text-sm font-light ml-2 select-none">{{ message.created_at }}</span>
+                    <span class="text-slate-400 text-sm font-light ml-2 select-none">{{ moment(message.created_at).format('DD/MM/YYYY ss:HH')  }}</span>
                 </div>
                 <div class="mt-1">
                     {{ message.message }}
@@ -33,6 +31,9 @@
     </div>
 </template>
 <script>
+import moment from 'moment';
+
+
 export default {
     methods: {
         async deleteMessage(message) {
@@ -45,6 +46,11 @@ export default {
             console.log(response.data)
             this.$emit("deletemessage", message);
         }
+    },
+    setup(){
+      return {
+          moment
+      }
     },
     props: ["messages", "auth_user"],
 };

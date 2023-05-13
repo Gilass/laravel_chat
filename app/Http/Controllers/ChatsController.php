@@ -10,7 +10,6 @@ use App\Events\MessageSent;
 
 class ChatsController extends Controller
 {
-    //Add the below functions
     public function __construct()
     {
         $this->middleware('auth');
