@@ -5,3 +5,7 @@
     <chat-container :user="{{Auth::user()}}"></chat-container>
 </div>
 @endsection
+
+@section('menu')
+    @include('layouts.menu')
+@endsection

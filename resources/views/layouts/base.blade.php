@@ -15,7 +15,6 @@
 
 <div class="flex h-full">
         @section('menu')
-                    @include('layouts.menu')
         @show
         <div class="flex-grow p-5">
             @section('content')
