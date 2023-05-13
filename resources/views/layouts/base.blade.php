@@ -10,10 +10,10 @@
         'resources/js/app.js'])
 
 </head>
-<body class="antialiased">
-<div class="text-white min-h-screen bg-gradient-to-tr from-slate-950 to-slate-900">
+<body class="antialiased bg-gradient-to-tr from-slate-950 to-slate-900">
+<div class="text-white min-h-screen  bg-bottom bg-no-repeat bg-gradient-to-t from-transparent from-30% via-slate-900 to-90% to-transparent">
 
-<div class="flex">
+<div class="flex ">
         @section('menu')
             {{--        @include('layouts.menu')--}}
         @show

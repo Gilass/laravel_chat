@@ -1,4 +1,4 @@
-<div class="bg-slate-800 px-10 py-4 rounded-lg border-2 border-slate-700 w-1/2">
+<div class="bg-slate-800 px-10 py-4 rounded-lg border-2 border-slate-700 w-1/2 mx-auto">
     <h1 class="text-4xl text-center mb-6">{{ __('Register') }}</h1>
     <form method="POST" action="{{ route('register') }}" class="flex flex-col gap-3">
         @csrf
